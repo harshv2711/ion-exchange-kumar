@@ -168,3 +168,44 @@ const visibilityObserver = new IntersectionObserver((entries) => {
 const socialListContainer = document.querySelector('.social-media-list');
 visibilityObserver.observe(socialListContainer);
 
+
+
+function animateSustainabilitySection() {
+    // Grab all the solution cards
+    const solutionCards = document.querySelectorAll('.sustainability-solutions-card');
+
+    // Function to trigger animation for each card
+    function triggerSolutionCardAnimation() {
+        solutionCards.forEach(card => {
+            card.classList.remove('show'); // Reset animation by removing the 'show' class
+            void card.offsetWidth; // Trigger reflow to reset the animation
+            card.classList.add('show'); // Add 'show' class to trigger animation
+        });
+    }
+
+    // Grab the CTA button
+    const ctaButton = document.querySelector('.cta');
+
+    // Function to animate the CTA button
+    function triggerCTAAnimation() {
+        ctaButton.classList.remove('show'); // Reset animation by removing the 'show' class
+        void ctaButton.offsetWidth; // Trigger reflow to reset the animation
+        ctaButton.classList.add('show'); // Add 'show' class to trigger CTA animation
+    }
+
+    // Intersection Observer to trigger animations when the section comes into view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                triggerSolutionCardAnimation(); // Trigger animation for solution cards
+                triggerCTAAnimation(); // Trigger animation for the CTA button
+            }
+        });
+    }, { threshold: 0.3 }); // Trigger when 30% of the section is visible
+
+    // Start observing the sustainability section
+    const sustainabilitySection = document.querySelector('.sustainability-solutions-section');
+    observer.observe(sustainabilitySection);
+}
+
+animateSustainabilitySection(); // Call the function to trigger the animations
