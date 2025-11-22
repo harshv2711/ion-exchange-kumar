@@ -901,3 +901,48 @@ footer small {
     opacity: 1; /* Fade in */
     transform: translateY(0); /* Slide up */
 }
+
+
+/* Navbar link style */
+.navbar-nav .nav-link {
+    text-decoration: none;
+    font-size: 14px;
+    color: #333333; /* Default text color */
+    position: relative;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+/* Adding gradient underline with animation */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #0072BC, #8DC63F); /* Gradient underline */
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; /* Smooth transition for the underline */
+}
+
+/* On hover, expand the underline with the gradient */
+.navbar-nav .nav-link:hover::after {
+    width: 100%; /* Full underline width */
+}
+
+/* Active state (optional) */
+.navbar-nav .nav-link.nav-link-active {
+    color: #0072BC; /* Change color of the active link */
+}
+
+.nav-link {
+    padding-left: 0!important;
+    padding-right: 0!important;
+    margin-left: 9px;
+    margin-right: 9px;
+}
+
+.nav-link {
+    font-weight: 400!important;
+
+}
