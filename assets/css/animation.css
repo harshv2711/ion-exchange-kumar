@@ -1,0 +1,321 @@
+.animated-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 26px;
+    border-radius: 6px;
+    text-decoration: none;
+    /* color: #fff; */
+    font-weight: 600;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-btn img {
+    transition: transform 0.3s ease;
+}
+
+/* Hover animation */
+.animated-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+.animated-btn:hover img {
+    transform: translateX(5px);
+}
+
+
+/* who we do  */
+/* Base Card */
+.primary-card {
+    background: #ffffff;
+    padding: 2em;
+    margin: 0;
+    border-radius: 12px;
+    transition: all 0.35s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Hover Lift + Shadow */
+.primary-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 40px rgba(0,0,0,0.12);
+    border-color: rgba(0,0,0,0.12);
+}
+
+/* Icon Animation */
+.primary-card .icon-wrapper img {
+    transition: transform 0.3s ease;
+}
+
+.primary-card:hover .icon-wrapper img {
+    transform: translateY(-6px) scale(1.08);
+}
+
+/* Caption Slight Lift */
+.primary-card-caption {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.primary-card:hover .primary-card-caption {
+    transform: translateY(-4px);
+}
+
+/* Underline Reveal Effect on “Learn more” */
+.primary-card-caption-item-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    overflow: hidden;
+}
+
+.primary-card-caption-item-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #0072BC, #8DC63F);
+    transition: width 0.3s ease;
+}
+
+.primary-card:hover .primary-card-caption-item-link::after {
+    width: 100%;
+}
+
+
+/* ================================
+   FOOTER LINK ANIMATION
+   ================================ */
+
+.footer-menu a,
+.link-list a {
+    position: relative;
+    display: inline-block;
+    color: #7a7676;
+    text-decoration: none;
+    transition: color 0.25s ease;
+    padding-bottom: 2px;
+}
+
+/* Underline (hidden initially) */
+.footer-menu a::after,
+.link-list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #0072BC, #8DC63F);
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Hover reveal */
+.footer-menu a:hover::after,
+.link-list a:hover::after {
+    width: 100%;
+}
+
+/* Slight color change on hover */
+.footer-menu a:hover,
+.link-list a:hover {
+    color: #0072BC;
+}
+
+
+/* ================================
+   NEWS CARD ANIMATION (Same Style)
+   ================================ */
+
+.news-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Image zoom animation */
+.news-card img {
+    transition: transform 0.4s ease;
+}
+
+.news-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Card lift + shadow */
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+    border-color: rgba(0,0,0,0.12);
+}
+
+/* Caption lift */
+.news-card-caption {
+    transition: transform 0.35s ease;
+}
+
+.news-card:hover .news-card-caption {
+    transform: translateY(-4px);
+}
+
+
+.story-card {
+    transition: all 0.35s ease;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.story-card .img-wrapper img {
+    transition: transform 0.4s ease;
+}
+
+/* Hover Animation */
+.story-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+}
+
+.story-card:hover .img-wrapper img {
+    transform: scale(1.08);
+}
+
+/* Caption slight lift */
+.story-card-caption {
+    transition: transform 0.35s ease;
+}
+
+.story-card:hover .story-card-caption {
+    transform: translateY(-4px);
+}
+
+
+/* Newsletter Button Animation */
+.new-letter-form-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.new-letter-form-btn img {
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover lift + shadow */
+.new-letter-form-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.20);
+}
+
+/* Icon slide */
+.new-letter-form-btn:hover img {
+    transform: translateX(4px);
+}
+
+/* Shine effect */
+.new-letter-form-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.35);
+    transform: skewX(-25deg);
+    transition: left 0.6s ease;
+}
+
+.new-letter-form-btn:hover::after {
+    left: 130%;
+}
+
+
+
+/* Initial hidden state */
+.iso-section-list li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+/* Visible state triggered by JS */
+.iso-section-list li.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* SMOOTH ISO ITEM ANIMATION */
+.iso-section-list li {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    will-change: opacity, transform;
+}
+
+.iso-section-list li.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Heart Beat Animation */
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.12); }
+    40% { transform: scale(0.96); }
+    60% { transform: scale(1.10); }
+    100% { transform: scale(1); }
+}
+
+/* Apply animation ONLY on Step 1 */
+.steps-wrapper .step:first-child {
+    animation: heartbeat 3s ease-in-out infinite;
+}
+
+
+/* Counter animation CSS */
+.counter {
+    display: inline-block;
+    font-size: 32px;
+    font-weight: bold;
+    color: #0072BC;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start from bottom */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* When the counter is in view */
+.counter.show {
+    opacity: 1;
+    transform: translateY(0); /* Slide up */
+}
+
+
+
+
+
+
+
